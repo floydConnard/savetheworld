@@ -1,0 +1,67 @@
+@import url("reset.css");
+
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #FFF;
+	padding: 10px;
+	background-image: url(../IMG/b_large.jpg);
+}
+#intro{
+	position: absolute;
+	margin: auto;
+	width: 50%;
+	height: 100%;
+}
+#button_enter{
+	width: 100%;
+	text-align: center;
+}
+#nav {
+	position: relative;
+	left: -250px;
+	width: 100%;
+	height: 100%;
+}
+nav ul {
+	position: relative;
+}
+nav ul li{
+	display: block;
+}
+
+#who {
+	background-color: #FFF;
+	position: relative;
+	width: 70%;
+	left: 20%;
+	border: solid 1px #CCC;
+}
+header, nav, aside,article, footer,  .hidden{
+	display: none;
+}
+a{
+	
+}
+.visible {
+	display:inherit;
+}
+#screen{
+	position: absolute;
+}
+.button, button {
+	background-color: white;
+	display: inline-block;
+	border: 1px solid #DDD;
+	padding: 20px;
+	margin: 10px;
+	color: #959595;
+	position: relative;
+	left: 0;
+}
+button:active, .button:active{
+	background-color: #a0a0a0;
+	border-color: #959595;
+	color: black;
+}
