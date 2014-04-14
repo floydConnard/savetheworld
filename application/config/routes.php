@@ -38,6 +38,7 @@
 |
 */
 
+//$route['form/validate_form_contact'] = 'form/validate_form_contact';
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
