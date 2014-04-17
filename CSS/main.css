@@ -1,4 +1,3 @@
-@import url("reset.css");
 
 body{
 	width: 100%;
@@ -11,23 +10,34 @@ body{
 	position: absolute;
 	left: 1024px;
 	top: 250px;
+	float: right;
 }
-#screen{
+.screen{
 	position: fixed;
-	top : 10px;
-	bottom: 10px;
-	left: 10px;
-	right: 10px;
 	margin: auto;
-	overflow: auto;
+	overflow: auto;	
+}
+#screen_1{
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+}
+#screen_2{
+	top: 0%;
+	bottom: 0%;
+	right : -100%;
+	left: 100%;
 	
 	
-	
+}
+#button_1{
+	margin: 0 0 0 25%; 
 }
 #bg_small {
 	background-image: url(../IMG/BG_HD.png);
 	background-repeat: no-repeat;
-	opacity: 0.75;
+	opacity: 0.55;
 	background-position: -20px -250px;
 	position: absolute;
 	z-index: 0;
@@ -45,6 +55,7 @@ body{
 #ID_card{
 	padding-left: 2em;
 }
+#loader{padding:25pax;}
 h1, h2, h3, h4, h5, h6{
 	font-family:'OptimusPrinceps';
 }

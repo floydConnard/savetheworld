@@ -33,18 +33,17 @@ class Welcome extends CI_Controller {
 		$this->load->helper(array('form', 'url', 'html'));
 		$this->load->library('javascript');
 		
-		$form_target = 'form/validate_form_contact';
-		$form_attributes = array('id'=>'contact_form');
 		
-		$form_output = form_open($form_target, $form_attributes);
-		//Début formulaire de contact
-		
-		
-		// PREMIER FIELDSET
-		$fieldset_coord_attributes = array('id'=>'form_fieldset_coord');
-		
-		$form_output .= form_fieldset('Vos Coordonnées', $fieldset_coord_attributes);
-		
+			//Début formulaire de contact 
+			
+			$form_target = 'form/validate_form_contact';
+			$form_attributes = array('id'=>'contact_form');
+			$form_output = form_open($form_target, $form_attributes);
+			
+			// PREMIER FIELDSET
+			$fieldset_coord_attributes = array('id'=>'form_fieldset_coord');
+			$form_output .= form_fieldset('Vos Coordonnées', $fieldset_coord_attributes);
+			
 			// NOM --------------->
 			$form_name_attributes = array(
 			'name'=>'nom',
@@ -91,15 +90,15 @@ class Welcome extends CI_Controller {
 			
 			$form_output .= form_label('Vous avez un site web ?',$form_site_attributes['id']);
 			$form_output .= form_input($form_site_attributes);
-		
-		// FIN PREMIER FIELDSET
-		$form_output .= form_fieldset_close();
-		
-		
-		// DEUXIEME FIELDSET
-		$fieldset_msg_attributes = array('id'=>'form_fieldset_msg');
-		
-		$form_output .= form_fieldset('Votre Message', $fieldset_msg_attributes);
+			
+			// FIN PREMIER FIELDSET
+			$form_output .= form_fieldset_close();
+			
+			
+			// DEUXIEME FIELDSET
+			$fieldset_msg_attributes = array('id'=>'form_fieldset_msg');
+			
+			$form_output .= form_fieldset('Votre Message', $fieldset_msg_attributes);
 		
 			// OBJET --------------->
 			$form_object_attributes = array(
@@ -134,15 +133,16 @@ class Welcome extends CI_Controller {
 			$form_output .= form_label('Je souhaite recevoir une copie de ce mail',$form_copy_attributes['id']);
 					
 						
-		// FIN DU DEUXIEME FIELDSET
-		$form_output .= form_fieldset_close();
+			// FIN DU DEUXIEME FIELDSET
+			$form_output .= form_fieldset_close();
+			
+			// SUBMIT & RESET
+			$form_output .= form_submit('submit', 'Envoyer');
+			$form_output .= form_reset('reset', 'Vider le formulaire');
+			
+			//Fin du formulaire de contact
+			$form_output .= form_close();
 		
-		// SUBMIT & RESET
-		$form_output .= form_submit('submit', 'Envoyer');
-		$form_output .= form_reset('reset', 'Vider le formulaire');
-		
-		//Fin du formulaire de contact
-		$form_output .= form_close();
 		
 		
 		
